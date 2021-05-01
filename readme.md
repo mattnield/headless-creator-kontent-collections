@@ -16,10 +16,10 @@ This repository contains everything you need to get started and run through the 
 
 ### <a name="restore"></a>Restore the project
 
-The content types and sample data used in this lesson are included in the `Contents.zip` file.
+The content types and sample data used in this lesson are included in the `content.zip` file.
 
 - Go to the [Kontent Template Manager][5], and select the **Import Project** option. 
-- In the *Import data* form, you need the **Project Id** and **Management API Key** of the destination project. Supply both of those values, and select the `Content.zip` file. Once the form is complete, select the **Prepare for import** option.
+- In the *Import data* form, you need the **Project Id** and **Management API Key** of the destination project. Supply both of those values, and select the `content.zip` file. Once the form is complete, select the **Prepare for import** option.
 - You'll be presented with a summary of the content model, content, and assets (all including language variants) to be imported if you proceed.
 - Select the **Import data** option again and confirm your choice in the resulting dialogue. The import of the data into your project is now complete.
 
