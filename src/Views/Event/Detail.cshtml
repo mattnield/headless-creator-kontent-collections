@@ -1,0 +1,33 @@
+﻿@model HeadlessCreator.Models.ViewModels.EventViewModel
+
+@{
+    var venue = Model.Event.Venue.OfType<Venue>().First();
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bulma-carousel/dist/css/bulma-carousel.min.css" rel="stylesheet">
+
+<div class="container">
+    <section class="hero is-small is-dark has-background">
+        <img src="@Model.Event.Gallery.First().Url" class="hero-background">
+        <div class="hero-body">
+            <p class="title">
+                @Model.Event.Name
+            </p>
+            <p class="subtitle">
+                @Model.Event.Date.Value.ToShortDateString()
+            </p>
+            <span class="tag is-light"><a asp-controller="Venue" asp-action="Detail"
+                    asp-route-venuecodename="@venue.System.Codename">@venue.Name</a></span>
+        </div>
+    </section>
+</div>
+
+<div class="container is-max-desktop">
+    <main class="content">
+        @Html.Raw(Model.Event.Description)
+    </main>
+    
+    <div class="columns">
+        @await Html.PartialAsync("_Venue", venue)
+    </div>    
+</div>

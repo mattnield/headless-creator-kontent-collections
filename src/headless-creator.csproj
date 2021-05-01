@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>HeadlessCreator</RootNamespace>
+    <UserSecretsId>af397e15-5dbd-4cc7-9b1b-c1da9e0256d6</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Kentico.Kontent.Delivery" Version="14.2.1" />
+  </ItemGroup>
+
+</Project>

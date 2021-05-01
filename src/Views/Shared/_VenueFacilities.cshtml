@@ -1,0 +1,10 @@
+@model IEnumerable<HeadlessCreator.Models.ContentTypes.Facility>
+
+
+<div class="section">
+    @foreach (var facility in Model)
+    {
+        <span class="tag is-info is-large">
+            <i class="@facility.Style"></i> @facility.Label</span>
+    }
+</div>

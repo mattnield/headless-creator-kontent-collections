@@ -1,0 +1,56 @@
+﻿@model HeadlessCreator.Models.ViewModels.VenueViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <section class="hero is-small is-dark">
+        <div class="hero-body">
+            <p class="title">
+                @Model.Venue.Name
+            </p>
+            <p class="subtitle">
+                Stay in the woods
+            </p>
+        </div>
+    </section>
+</div>
+
+<article class="media">
+    <figure class="media-left">
+        <p class="image" style="max-width:512px">
+            <img src="@(Model.Venue.Gallery.First().Url)">
+        </p>
+    </figure>
+    <div class="media-content">
+        <div class="content">
+            @Html.Raw(Model.Venue.Description)
+        </div>
+    </div>
+</article>
+
+@if(Model.Venue.Facilities.Any())
+{
+    @await Html.PartialAsync("_VenueFacilities", Model.Venue.Facilities.OfType<Facility>())
+}
+
+<div class="container">
+    <h2 class="title is-2">Upcoming Events</h2>
+
+    <div class="columns">
+        @foreach (var upcomingEvent in Model.UpcomingEvents.Take(3))
+        {
+            @await Html.PartialAsync("_Event", upcomingEvent)
+        }
+
+    </div>
+
+    @if (Model.UpcomingEvents.Count() > 3)
+    {
+        @foreach (var upcomingEvent in Model.UpcomingEvents.Skip(3))
+        {
+            @await Html.PartialAsync("_EventSlim", upcomingEvent)
+        }
+    }
+</div>

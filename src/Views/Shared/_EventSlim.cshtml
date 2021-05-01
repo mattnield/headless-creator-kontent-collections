@@ -1,0 +1,25 @@
+@model HeadlessCreator.Models.ContentTypes.Event
+
+<article class="media">
+    <figure class="media-left">
+        <p class="image is-128x128">
+            <img src="@(Model.Gallery.First().Url)">
+        </p>
+    </figure>
+    <div class="media-content">
+        <div class="content">
+            <p>
+                <strong>@Model.Name</strong>
+                <br>
+                @Model.Date.Value.ToShortDateString()
+            </p>
+
+        </div>
+        <nav class="level">
+            <div class="level-left">
+                <a class="level-item " asp-controller="Event" asp-action="Detail"
+                    asp-route-eventcodename="@Model.System.Codename">Find out more</a>
+            </div>
+        </nav>
+    </div>
+</article>

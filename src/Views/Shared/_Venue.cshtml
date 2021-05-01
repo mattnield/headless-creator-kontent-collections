@@ -1,0 +1,25 @@
+@model HeadlessCreator.Models.ContentTypes.Venue
+
+<div class="column is-one-third">
+    <div class="card">
+        <div class="card-image">
+            <figure class="image is-4by3">
+                <img src="@Model.Gallery.First().Url" alt="Placeholder image">
+            </figure>
+            <div class="card-stacked">
+                <div class="card-content">
+                    <div class="media-content">
+                        <p class="title is-4">@Model.Name</p>
+                    </div>
+
+                </div>
+                <footer class="card-footer">
+                    <div class="card-footer-item has-text-left">
+                        <a class="button is-primary" asp-controller="Venue" asp-action="Detail"
+                            asp-route-venuecodename="@Model.System.Codename">Find out more</a>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</div>
