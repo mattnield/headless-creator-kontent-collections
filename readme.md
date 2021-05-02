@@ -1,6 +1,6 @@
 # Kontent Collections Demo
 
-This repository contains the files used for a demo of [Collections][2] in [Kentico Kontent][3]. You can watch the lesson for this on the Headless Creator website. Sign-up is free, and there is some great content there.
+This repository contains the files used for a demo of [Collections][2] in [Kentico Kontent][3]. You can watch the lesson for this on the [Headless Creator website][7]. Sign-up is free, and there is some great content there.
 
 ![Using Collections to Manage Content Access Lesson][banner]
 
@@ -63,3 +63,4 @@ dotnet run
 [4]: https://kontent.ai/pricing#collections
 [5]: https://kentico.github.io/kontent-template-manager/
 [6]: https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-5.0&tabs=windows
+[7]: https://www.headlesscreator.com/
